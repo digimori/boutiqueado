@@ -19,7 +19,7 @@
 </head>
 <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">       
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="text-black"><strong>Boutique</strong> Ado</h2>
@@ -76,6 +76,18 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav"></button>
+                {% include 'includes/mobile_top_header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
+        </div>
+        <div class="row text-center" id="delivery-banner">
+            <div class="col bg-black text-white">
+                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_shipping_threshold }}!</h4>
             </div>
         </div>
     </header>

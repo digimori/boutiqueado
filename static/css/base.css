@@ -3,11 +3,11 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    background-size: cover;
+	background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+	background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: "Lato";
 }
 
 /* from Bulma */
@@ -28,13 +28,13 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background-color: black;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background-color: black;
     color: white;
 }
 
@@ -44,7 +44,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background-color: #222;
     color: white;
 }
 
@@ -56,7 +56,11 @@ body {
     border: 1px solid black !important;
 }
 
-/* -------------------------------- Media Queries */
+.bg-black {
+    background-color: #000 !important;
+}
+
+/* --------------------------------- Media queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
