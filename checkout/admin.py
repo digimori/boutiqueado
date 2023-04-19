@@ -12,13 +12,15 @@ class OrderAdmin(admin.ModelAdmin):
 
     readonly_fields = ('order_number', 'date',
                        'delivery_cost', 'order_total',
-                       'grand_total',)
+                       'grand_total', 'original_bag',
+                       'stripe_pid')
 
     fields = ('order_number', 'date', 'full_name',
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
               'street_address2', 'county', 'delivery_cost',
-              'order_total', 'grand_total',)
+              'order_total', 'grand_total', 'original_bag',
+              'stripe_pid')
 
     list_display = ('order_number', 'date', 'full_name',
                     'order_total', 'delivery_cost',
@@ -26,15 +28,4 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ('-date',)
 
-
 admin.site.register(Order, OrderAdmin)
-
-"""
-
-Fields keeps the model order as Django will try to
-change it based on the read_only fields.
-
-list_display restricts the columns that show up in the order list
-to only a few key items
-
-"""
